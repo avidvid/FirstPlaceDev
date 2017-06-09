@@ -1,2 +1,0 @@
-# FirstPlaceDev
-CFHP internal Website 
