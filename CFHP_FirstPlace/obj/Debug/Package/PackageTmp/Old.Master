@@ -1,0 +1,102 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Old.master.cs" Inherits="CFHP_FirstPlace.Old" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="~/Styles/Old.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript">
+        function mainmenu() {
+            $(" #nav ul ").css({ display: "none" }); // Opera Fix
+            $(" #nav li").hover(function () {
+                $(this).find('ul:first').css({ visibility: "visible", display: "none" }).show(400);
+            }, function () {
+                $(this).find('ul:first').css({ visibility: "hidden" });
+            });
+        }
+
+    </script>
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:Panel ID="Logo" runat="server">
+            <asp:Image ID="Image1" runat="server" 
+                width="980" height="155" ImageUrl="~/Images/header.jpg">
+            </asp:Image>
+        </asp:Panel>
+        <div id="menu">
+        <ul id="nav">
+            <li><a href="http://isintranet/">IS Web Portal</a></li>
+            <li><a href="http://isintranet/is/" >Information Systems</a>
+                <ul>
+                    <li><a href="http://isintranet/is/development.asp">Development Team</a></li>
+                    <li><a href="http://isintranet/is/mission.asp">Mission Statement</a></li>
+                    <li><a href="http://isintranet/is/staff.asp">Staff</a></li>
+                    <li><a href="http://isintranet/is/tservice.asp">Technical Service</a></li>
+                </ul>
+            </li>
+            <li>Online Apps
+                <ul>
+                    <li>External Web Applications</li>
+                    <li><a href="http://ark.gtess1.com/" target="_blank">--GTESS</a></li>
+                    <li><a href="http://www.hayesinc.com/subscribers/passThroughLogin.do?key=dirba87aenawvlkjrbmabvmawenbp" target="_blank">--Hayes</a></li>
+                    <li><a href="https://secure.healthx.com/publicservice/loginv1/login.aspx?bc=b9d4901c-074e-4cdc-892c-10993d57eef8&serviceid=b646f053-b6ff-4b7e-a8e2-01416e1743dc" target="_blank">--HealthX</a></li>
+                    <li><a href="https://nppes.cms.hhs.gov/NPPES/NPIRegistryHome.do" target="_blank">--NPPES</a></li>
+                    <li><a href="https://cfhp.perflogic.com/login/" target="_blank">--Performance Logic</a></li>
+                    <li>Internal Web Applications</li>
+                    <li><a href="http://amisys" target="_blank">--AMISYS Advance Production</a></li>
+                    <li><a href="http://isintranet/operations/fh" target="_blank">--First Health Search</a></li>
+                    <li><a href="http://isintranet/operations/npi/" target="_blank">--NPI Database</a></li>
+                    <li>--PVM Database
+                        <ul>
+                            <li><a href="http://isintranet/operations/pvm/">PVM</a></li>
+                            <li><a href="http://isintranet/operations/pvmex/">PVM Exclude</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="http://isintranet/webreports.asp">--Web Reports</a></li>
+                    <li>Administravtive Applications</li>
+                    <li><a href="http://isintranet/App_Corporate_DOB/App.User/SearchBirthDay.aspx">--DOB Admin</a></li>
+                    <li><a href="http://isintranet/App_Corporate_DOB/Prov.User/ProvSearchUsers.aspx">--Prov Cred Admin</a></li>
+                    <li><a href="http://isintranet/App_Corporate_DOB/App.User/SearchUsers.aspx">--User Admin</a></li>
+                    <li><a href="http://isintranet/App_Corporate_DOB/FirstPlace/ContentSearch.aspx">--FirstPlace Content</a></li>
+                    <li><a href="http://isintranet/App_Corporate_DOB/FirstPlace/EventSearch.aspx">--FirstPlace Event</a></li>
+                    <li><a href="http://isintranet/App_Corporate_DOB/OONPricing/NHICPInfo.aspx">--OONPricing</a></li>
+                    <li><a href="http://isintranet/App_Corporate_DOB/IT/ServiceRequest.aspx">--OONPricing</a></li>
+                    <li>CFHP
+                        <ul>
+                            <li><a href="http://firstplace" target="_blank">FirstPlace Intranet</a></li>
+                            <li><a href="http://www.cfhp.com" target="_blank">CFHP.COM</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>UHS Applications
+                <ul>
+                    <li><a href="http://www.uhstx.com/" target="_blank">UHS Employee Extranet Portal</a></li>
+                    <li><a href="http://uh-ezauthor-01/maxtrax/" target="_blank">MaxTrax (E-Learning Modules)</a></li>
+                    <li><a href="http://www.universityhealthsystem.com/" target="_blank">UHS Web Site</a></li>
+                </ul>
+            </li>
+            <li><a href="http://isintranet/employeesearch.asp">Employee Search</a></li>
+        </ul>
+        </div>
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+        <div id="footer">
+            <asp:Panel id="menuPanel" runat="server" CssClass="menuPanel"  > |
+                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="http://isintranet/default.asp">IS Web Portal</asp:HyperLink> |
+                <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="http://firstplace/">First Place</asp:HyperLink> |
+                <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="http://isintranet/IS/default.asp">Information Systems</asp:HyperLink> |
+                <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="http://isintranet/wbreports.asp">Web Reports</asp:HyperLink> |
+                <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="http://isintranet/IS/request/default.asp">Work Order Request</asp:HyperLink> |
+                <asp:HyperLink ID="HyperLinkPass" runat="server" NavigateUrl="http://isintranet/employeesearch.asp">Employee Search</asp:HyperLink> |
+            </asp:Panel>
+            <!--<p id="P1">&copy; 2013 Avid @ Community First</p> -->
+        </div>
+    </form>
+</body>
+</html>

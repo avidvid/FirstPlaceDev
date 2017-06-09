@@ -1,0 +1,38 @@
+#MainLeftSide
+{
+    width:20%;
+    display:block;
+    float:left;
+}
+
+
+#MainRightSide
+{
+    width:80%;
+    display:block;
+    float:right;
+}
+
+
+.GridViewStyle
+{    
+    font-weight: normal;
+    width:100%;
+}
+
+.GridViewHeaderStyle
+{     
+    background-color:#A3D422;
+    font-weight: bold; 
+    color: #424146; 
+}
+.GridViewRowStyle
+{    
+    background-color:#E3EAEB;
+    text-align:left;
+}
+.GridViewAlternatingRowStyle
+{
+    background-color: #FFFFFF;
+    text-align: left;
+}

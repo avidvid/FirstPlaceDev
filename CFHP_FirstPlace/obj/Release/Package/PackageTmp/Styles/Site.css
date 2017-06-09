@@ -1,0 +1,105 @@
+﻿
+
+
+
+
+
+.Info
+{
+    text-align: left;
+    width: 80%;
+    margin:auto;
+}
+
+h5
+{
+    color: #008000;
+}
+
+
+
+
+#header
+{
+    width:100%;
+}   
+
+
+
+.CenterTable
+{
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10%;
+}
+
+#rightside
+{
+    width: 19%;
+    float: left;
+    padding-right: 1%;
+    padding-top: 4em;
+    background-color: #99FF99;
+    padding-bottom: 4em;
+}   
+
+
+
+
+.NoBorder
+{
+    border-style: none;
+}
+
+
+
+.GridViewStyle
+{    
+    font-weight: normal;
+}
+
+.GridViewHeaderStyle
+{     
+    background-color:#1C5E55;
+    font-weight: bold; 
+    color: #FFFFFF; 
+}
+.GridViewRowStyle
+{    
+    background-color:#E3EAEB;
+    text-align:left;
+}
+
+.GridViewAlternatingRowStyle
+{
+    background-color: #FFFFFF;
+    text-align: left;
+}
+
+
+
+
+#ForgotPass
+{
+    margin-top: 50px;
+    margin-left: 450px;
+    height: 400px;
+}
+
+
+
+
+
+#RightBar
+{
+    float:right;
+    width:35%;
+    margin-right:10px;
+}
+
+#LeftBar
+{
+    float:left;
+    width:60%;
+    margin-left:8px;
+}

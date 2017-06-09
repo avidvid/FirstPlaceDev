@@ -1,0 +1,186 @@
+﻿html
+{
+    background-color: #FFF;
+    font-family: 'century Gothic' , Arial, Helvetica, Sans-Serif;
+    font-size: .9em;
+}
+
+body, head
+{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+
+.ImageCss
+{
+    width: 90%;
+    border: none;
+    background: none;   
+}
+
+
+
+
+
+/*a:link
+a:visited
+a:hover
+a:active
+a:focus*/
+a
+{
+    text-decoration: none;
+}
+
+a:link, a:visited
+{
+    color: #008000;
+    font-weight: bold; 
+    
+}
+
+a:hover, a:active, a:focus
+{
+    color: #00FF00;
+}
+
+
+img
+{
+    border:none;
+    margin:0;
+    padding:0;
+}
+
+table
+{
+    font-weight: bold;
+    text-align:center;
+    margin:auto;
+}
+
+
+
+h2
+{ 
+    text-align: center;
+}
+
+
+.validationError
+{
+    font-weight: bold;
+    color: #FF0000;
+}
+.validationOk
+{
+    font-weight: bold;
+    color: #33CC33;
+}
+
+
+
+#Main
+{
+    margin-top: 1em;
+    padding:2%;
+    overflow:auto;
+    text-align: center;
+}
+
+.NewsDiv
+{
+    clear:both;
+}
+
+.NewsBox0
+{
+    background-color: #CCFF99;
+    float: left;
+    width: 46%;
+    margin: 1%;
+    padding:1%;
+}
+.NewsBox1
+{
+    background-color: #CCFF99;
+    float: right;
+    width: 46%;
+    margin: 1%;
+    padding:1%;
+}
+
+.Frame
+{
+    float: left;
+    width: 19%;
+    height: 15em;
+    margin: 1% .5% 1% .5%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.Frame_Pic
+{
+    padding-top: 5%;
+    text-align: center;
+    width: 150Px;
+    height: 170Px;
+    padding-left: 7%;
+}
+
+.PersonalPic
+{
+   width:90%;
+}
+
+.EventPic
+{
+    width:150PX;
+    
+}
+
+
+#MainPanel
+{
+    width: 100%;
+    text-align:center;
+}
+
+.Panel_Pic
+{
+    width: 22.5%;
+    padding:1%;
+    float:left;
+}
+
+
+#MainContent_Calendar1
+{
+    margin:5%;
+}
+
+
+.UserTextBox
+{
+    background-color: #99CCFF;
+}
+
+
+.Center
+{
+    margin: auto;
+}
+
+.Info
+{
+    text-align: left;
+}
+
+
+#ListView table
+{
+    text-align: left;
+    padding-left: 3em;
+}

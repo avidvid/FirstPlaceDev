@@ -1,0 +1,99 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="CFHP_FirstPlace.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>    
+    <link href="~/Styles/Main.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/Header.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/Footer.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript">
+        function mainmenu() {
+            $(" #nav ul ").css({ display: "none" }); // Opera Fix
+            $(" #nav li").hover(function () {
+                $(this).find('ul:first').css({ visibility: "visible", display: "none" }).show(400);
+            }, function () {
+                $(this).find('ul:first').css({ visibility: "hidden" });
+            });
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<form id="form1" runat="server">
+    <div id="page">
+        <div id="header">
+            <!--<div id="SearchBox">
+                    <asp:Image id="Search" runat="server"  ImageUrl="~/Images/Header/Search.png" CssClass="SearchImage">
+                    </asp:Image>
+                    <asp:TextBox ID="TextBoxSearch" runat="server" CssClass="SearchTextBox"></asp:TextBox>
+            </div>-->
+            <div id="MenuBox">
+                <ul id="nav">
+                    <% Show_Menu();%>
+                </ul>
+            </div>
+            <div id="LogoBox">
+                <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/Default.aspx">
+                    <asp:Image id="Logo" runat="server"  ImageUrl="~/Images/Header/LogoBox.png" CssClass="LogoImage">
+                    </asp:Image>
+                </asp:HyperLink>
+            </div>
+        </div>
+        <asp:Image id="Slider" runat="server" ImageUrl="~/Images/Slider/Slider01.jpg" CssClass="SliderImage">
+        </asp:Image>
+        <div id="Main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    <div id="Footer">
+        <asp:Panel id="menuPanel" runat="server" CssClass="menuPanel"  > |
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="http://isintranet/default.asp">IS Web Portal</asp:HyperLink> |
+            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="http://firstplace/">First Place</asp:HyperLink> |
+            <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="http://isintranet/IS/default.asp">Information Systems</asp:HyperLink> |
+            <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="http://isintranet/webreports.asp">Web Reports</asp:HyperLink> |
+            <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="http://isintranet/IS/request/default.asp">Work Order Request</asp:HyperLink> |
+            <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/EmployeeSearch.aspx">Employee Search</asp:HyperLink> |
+        </asp:Panel>
+
+        <div id="FooterLeft">
+            <h4>Our Mission</h4>
+            <p>The mission of Community First Health Plans (“CFHP”) is to support the University Health System (“UHS”) mission by transitioning uninsured and underinsured Bexar County citizens to more comprehensive and affordable health benefits coverage.</p> 
+            <asp:Image id="Image_Logo_White" runat="server"  ImageUrl="~/Images/Footer/CFHP_Logo_White.png" CssClass="ImageCss" ></asp:Image>
+        </div>
+        <div id="FooterMid">
+            <a href="http://www.accuweather.com/en/us/san-antonio-tx/78205/weather-forecast/351198" class="aw-widget-legal"></a>
+            <div id="awcc1388499032169" class="aw-widget-current" data-locationkey="351198" data-unit="f" data-language="en-us" data-useip="false" data-uid="awcc1388499032169"></div>
+            <script type="text/javascript" src="http://oap.accuweather.com/launch.js"></script>
+
+            <asp:HyperLink ID="HyperLinkTraffic" runat="server" Target="_blank" NavigateUrl="https://www.google.com/maps/place/San+Antonio,+TX/@29.4814306,-98.5144044,10z/data=!3m1!4b1!4m2!3m1!1s0x865c58af04d00eaf:0x856e13b10a016bc!5m1!1e1">
+                    <asp:Image id="ImageTraffic" runat="server"  ImageUrl="~/Images/Footer/TrafficMap.png" CssClass="ImageTraffic">
+                    </asp:Image>
+            </asp:HyperLink>
+
+            <asp:Calendar ID="CalendarSide" runat="server" BackColor="White" 
+                BorderColor="#999999"  CssClass="CalendarSide"
+                ForeColor="Black" CellPadding="4" 
+                DayNameFormat="Shortest" onselectionchanged="CalendarSide_SelectionChanged">
+                <DayHeaderStyle Font-Bold="True" Font-Size="7pt" BackColor="#CCCCCC" />
+                <NextPrevStyle 
+                    VerticalAlign="Bottom" />
+                <OtherMonthDayStyle ForeColor="#808080" />
+                <SelectedDayStyle BackColor="#666666" ForeColor="White" Font-Bold="True" />
+                <SelectorStyle BackColor="#CCCCCC" />
+                <TitleStyle BackColor="#999999" BorderColor="Black" 
+                    Font-Bold="True" />
+                <TodayDayStyle BackColor="#CCCCCC" ForeColor="Black" />
+                <WeekendDayStyle BackColor="#FFFFCC" />
+            </asp:Calendar>
+            <p id="P1">&copy; 2015 CFHP</p> 
+        </div>
+        <div id="FooterRight">
+            <asp:Image id="Image1" runat="server"  ImageUrl="~/Images/Footer/Contact_Button.png" CssClass="ImageCss"></asp:Image>
+        </div>
+    </div>
+</form>
+</body>
+</html>

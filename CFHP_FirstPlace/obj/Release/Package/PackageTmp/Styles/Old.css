@@ -1,0 +1,276 @@
+﻿#menu
+{
+    margin-bottom: 50px;
+    margin-top: 3px;
+    padding-left: 8px;
+}
+
+#nav, #nav ul
+{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    position: relative;
+    line-height: 2em;
+}
+
+#nav a{
+    color:#000;
+    text-decoration:none;
+}
+
+#nav li
+{
+    background-color: #F2D54E;
+    float: left;
+    position: relative;
+    text-transform: none;
+    width: 13.34em;
+}
+
+#nav li li
+{
+    line-height: 1.5em;
+    border: 1px solid #3470AE;
+    width: 18em;
+    height: auto;
+    float: left;
+    font-size: small;
+    text-align: left;
+}
+
+#nav ul {
+    position:absolute;
+    display:none;
+    width:12em;
+    top:2em;
+    left:0;
+}
+
+#nav li ul ul {
+    left:18em;
+    top:0em;
+    position: absolute;
+}
+
+#nav li:hover ul ul, #nav li:hover ul ul ul, #nav li:hover ul ul ul ul{
+    display:none;
+}
+#nav li:hover ul, #nav li li:hover ul, #nav li li li:hover ul, #nav li li li li:hover ul{
+    display:block;
+}
+
+BODY
+{
+    list-style-position: outside;
+    font-size: 10pt;
+    vertical-align: top;
+    text-transform: none;
+    color: black;
+    line-height: normal;
+    list-style-type: circle;
+    letter-spacing: normal;
+    position: static;
+	background-image: url(); 
+    background-color: #3C76B2;
+/*    background-color: white;*/
+    text-align: left;
+    width: 980px;
+    margin: 0px;   
+		
+}
+
+
+body, head
+{
+    font-family: Arial,Helvetica,Sans-Serif;
+    font-size: .9em;
+    text-align: center;
+    vertical-align: middle;
+}
+h5
+{
+    color: #008000;
+}
+
+table
+{
+    margin-right: auto;
+    margin-left: 209px;
+    font-weight: bold;
+}
+
+.list
+{
+    text-align:left;
+}
+
+
+.ItForm
+{
+    width: 90%;
+    text-align: left;
+    font-weight: normal;
+    vertical-align: top;
+}
+
+.ItForm tr
+{
+    height:30PX;
+}
+
+.ItForm .header
+{
+    font-weight: bold;
+    font-size: small;
+}
+
+.ItForm .headerer
+{
+    font-weight: bold;
+    font-size: large;
+}
+
+.thight
+{
+    margin: 10px;
+    font-weight: normal;
+    vertical-align: top;
+    font-size: medium;
+}
+.thight tr{
+    height:1.5em;  
+}​
+
+/*a:link
+a:visited
+a:hover
+a:active
+a:focus*/
+a
+{
+    text-decoration: none;
+}
+a:link, a:visited
+{
+    color: #008000;
+    text-decoration: none;
+}
+a:hover, a:active, a:focus
+{
+    color: #00FF00;
+    text-decoration: none;
+}
+
+
+
+.NoBorder
+{
+    border-style: none;
+}
+
+.validationError
+{
+    background-color: #EEEEEE;
+    font-weight: bold;
+    color: #FF0000;
+}
+.validationOk
+{
+    background-color: #CCFFCC;
+    font-weight: bold;
+    color: #33CC33;
+}
+
+.GridViewStyle
+{    
+    font-weight: normal;
+}
+
+.GridViewHeaderStyle
+{     
+    background-color:#1C5E55;
+    font-weight: bold; 
+    color: #FFFFFF; 
+}
+.GridViewRowStyle
+{    
+    background-color:#E3EAEB;
+    text-align:left;
+}
+
+.GridViewAlternatingRowStyle
+{
+    background-color: #FFFFFF;
+    text-align: left;
+}
+
+#form1
+{
+    background-color: #FFFFFF;
+    width:980px;
+}
+
+.Center
+{
+    margin-right: 100px;
+}
+
+
+
+#ForgotPass
+{
+    margin-top: 50px;
+    margin-left: 450px;
+    height: 400px;
+}
+
+.ErrorMsg
+{
+    font-weight: bold;
+    font-size: large;
+    color: #FF0000;
+}
+.OkBoldMsg
+{
+    color: #FF00FF;
+    font-weight: bold;
+    font-size: large;
+}
+
+
+.BoldMsg
+{
+    color: #FF00FF;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+
+
+.OkMsg
+{
+    color: #33CC33;
+    font-weight: bold;
+    font-size: large;
+}
+
+#footer
+{
+    padding-top: 100px;
+    clear: both;
+}
+
+#RightBar
+{
+    float:right;
+    width:35%;
+    margin-right:10px;
+}
+
+#LeftBar
+{
+    float:left;
+    width:60%;
+    margin-left:8px;
+}

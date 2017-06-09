@@ -1,0 +1,92 @@
+#Footer
+{
+    background-color: #414146;
+    color: #FFFFFF;
+    clear: both;
+    font-size:xx-small;
+    overflow: hidden ;
+}
+
+.PicFram
+{
+    width:19.8%;
+    padding-top:1%;
+    float:left;
+}
+
+
+#Footer a:link,#Footer a:visited
+{
+    color: White;
+}
+
+#Footer a:hover,#Footer a:active,#Footer  a:focus
+{
+    color: White;
+}
+
+
+#FooterRight
+{
+    padding-top:15%;
+    width:15%;
+    float:right;
+    
+}
+
+#FooterMid
+{
+    width:35%;
+    float:left;
+    height:18em;
+    padding-left:1%;
+    padding-top:5%;
+    padding-right:1%;
+}
+
+/* Weather */
+#awcc1388499032169
+{
+    width: 100px;
+    float:right;
+} 
+
+.CalendarSide
+{
+    width:50%;
+}
+
+
+.ImageTraffic
+{
+    width: 100px;
+    border: none;
+    background: none; 
+    float:right;  
+    clear:both;
+}
+
+
+#FooterLeft
+{
+    width:35%;
+    float:left;
+    margin-left:2%;
+    text-align:center;
+}
+
+#FooterLeft P
+{
+    font-size: 1.5em;
+    text-align: justify;
+    font-weight: bold;
+}
+
+
+#FooterLeft .ImageCss
+{
+    width: 44%;
+    border: none;
+    margin:auto;
+    background: none;  
+}

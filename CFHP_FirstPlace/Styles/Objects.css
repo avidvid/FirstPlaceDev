@@ -1,0 +1,32 @@
+﻿.ErrorMsg
+{
+    font-weight: bold;
+    font-size: large;
+    color: #FF0000;
+}
+.OkBoldMsg
+{
+    color: #FF00FF;
+    font-weight: bold;
+    font-size: large;
+}
+
+.OkMsg
+{
+    color: #33CC33;
+    font-weight: bold;
+    font-size: large;
+}
+
+
+.Center
+{
+    text-align: center;
+}
+
+
+.NoMargin
+{
+    margin:0;
+    padding:0;
+}
