@@ -53,6 +53,7 @@ namespace CFHP_FirstPlace.UserHelpDesk
             }
             catch (Exception ex)
             {
+                SendError(ex.Message, "[Error] UserEdit Dep");
                 Response.Write("ERROR Dep: " + ex.Message);
             }
         }
@@ -81,6 +82,7 @@ namespace CFHP_FirstPlace.UserHelpDesk
             }
             catch (Exception ex)
             {
+                SendError(ex.Message, "[Error] UserEdit SubDep");
                 Response.Write("ERROR SubDep: " + ex.Message);
             }
         }
@@ -108,6 +110,7 @@ namespace CFHP_FirstPlace.UserHelpDesk
             }
             catch (Exception ex)
             {
+                SendError(ex.Message, "[Error] UserEdit Auth");
                 Response.Write("ERROR Auth: " + ex.Message);
             }
         }
@@ -130,6 +133,7 @@ namespace CFHP_FirstPlace.UserHelpDesk
             }
             catch (System.Exception ex)
             {
+                SendError(ex.Message, "[Error] UserEdit Title");
                 Response.Write("ERROR Title: " + ex.Message);
             }
         }
@@ -170,6 +174,7 @@ namespace CFHP_FirstPlace.UserHelpDesk
             }
             catch (System.Exception ex)
             {
+                SendError(ex.Message, "[Error] UserEdit SET");
                 Response.Write("ERROR SET: " + ex.Message);
             }
         }
@@ -217,6 +222,7 @@ namespace CFHP_FirstPlace.UserHelpDesk
             }
             catch (Exception ex)
             {
+                SendError(ex.Message, "[Error] UserEdit UPDATE");
                 Response.Write("ERROR UPDATE: " + ex.Message);
                 LabelError.Text = "ERROR: " + ex.Message;
             }
@@ -264,6 +270,7 @@ namespace CFHP_FirstPlace.UserHelpDesk
             }
             catch (Exception ex)
             {
+                SendError(ex.Message, "[Error] UserEdit ADD");
                 Response.Write("ERROR ADD: " + ex.Message);
                 LabelError.Text = "ERROR: " + ex.Message;
             }
@@ -274,7 +281,6 @@ namespace CFHP_FirstPlace.UserHelpDesk
         }
         public void RegisterDefaultButton(System.Web.UI.Control ControlWithFocus, System.Web.UI.Control ControlToClick)
         {
-
             PostBackOptions p = new PostBackOptions(ControlToClick);
             p.PerformValidation = true;
             if (ControlToClick is Button)
@@ -313,6 +319,27 @@ namespace CFHP_FirstPlace.UserHelpDesk
             }
             catch (System.Exception ex)
             {
+                SendError(ex.Message, "[Error] UserEdit email");
+                return "Send failure due to : <br />" + ex.Message;
+            }
+        }
+        public string SendError(string Msg, string Subj)
+        {
+            try
+            {
+                MailMessage objEmail = new MailMessage();
+                objEmail.From = new MailAddress("webmaster@cfhp.com");
+                objEmail.To.Add("anarimani@cfhp.com");
+                objEmail.Subject = Subj;
+                objEmail.Body = Msg;
+                //Local Host
+                SmtpClient SMTPServer = new SmtpClient("EX2010.CFHP.com", 25);
+                SMTPServer.UseDefaultCredentials = false;
+                SMTPServer.Send(objEmail);
+                return "Your Email has been sent sucessfully - Thank You";
+            }
+            catch (System.Exception ex)
+            {
                 return "Send failure due to : <br />" + ex.Message;
             }
         }
@@ -327,7 +354,7 @@ namespace CFHP_FirstPlace.UserHelpDesk
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    EmailList += dr["Email"].ToString().ToLower().Trim()+",";
+                    EmailList += dr["Email"].ToString().ToLower().Trim() + ",";
                 }
                 EmailList += "webmaster@cfhp.com";
                 dr.Dispose();
@@ -335,6 +362,7 @@ namespace CFHP_FirstPlace.UserHelpDesk
             }
             catch (System.Exception ex)
             {
+                SendError(ex.Message, "[Error] UserEdit admin email");
                 Response.Write(ex.Message);
             }
             return EmailList;
