@@ -8,6 +8,6 @@
         About
     </h2>
     <p>
-        Put content here.
+        Put about content here.
     </p>
 </asp:Content>
